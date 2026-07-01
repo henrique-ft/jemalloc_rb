@@ -1,4 +1,4 @@
-# jemalloc
+# je_malloc
 
 Instant [jemalloc](http://www.canonware.com/jemalloc/) injection into Ruby apps, for better performance and less memory.
 
@@ -14,19 +14,19 @@ Installing jemalloc separately from Ruby is pain in some cases (e.g. Heroku, Eng
 
 # Install
 
-Install `jemalloc` gem in your application. For [bundler](http://gembundler.com/) based application, please add the following line into your Gemfile, and and install `jemalloc` by `bundle install`.
+Install `je_malloc` gem in your application. For [bundler](http://gembundler.com/) based application, please add the following line into your Gemfile, and and install `jemalloc` by `bundle install`.
 
-    gem 'jemalloc'
+    gem 'je_malloc'
 
 # Usage
 
 Execute your application with `je` command, which is contained in `je` gem. Example command for Rails + bundler application is like follows.
 
-    $ bundle exec je ./script/rails s
+    $ bundle exec je s
 
 `-v` option will let you confirm jemalloc is actually injected.
 
-    $ bundle exec je -v ./script/rails s
+    $ bundle exec je -v rails s
     => Injecting jemalloc...
     => Booting WEBrick
     ...
